@@ -6,10 +6,31 @@ Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
 	<constant name="struts.devMode" value="true" />
 	<package name="default" extends="struts-default">
 
-		<action name="listaAlunos" class="br.com.minimundo.action.ListaAlunosAction"
+		<action name="listaTurma1" class="br.com.minimundo.action.ListaTurma1"
 			method="execute">
-			<result name="success">alunos.jsp</result>
+			<result name="success">turma1.jsp</result>
 		</action>
+
+		<action name="listaTurma2" class="br.com.minimundo.action.ListaTurma2"
+			method="execute">
+			<result name="success">turma2.jsp</result>
+		</action>
+
+		<action name="listaTurma3" class="br.com.minimundo.action.ListaTurma3"
+			method="execute">
+			<result name="success">turma3.jsp</result>
+		</action>
+
+		<action name="listarMelhores" class="br.com.minimundo.action.ListarMelhoresAction"
+			method="execute">
+			<result name="success">melhoresAlunos.jsp</result>
+		</action>
+
+		<action name="vencedor" class="br.com.minimundo.action.ListarMelhoresAction"
+			method="vencedor">
+			<result name="success">vencedor.jsp</result>
+		</action>
+
 	</package>
 
 </struts>  

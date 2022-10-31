@@ -1,13 +1,15 @@
 package br.com.minimundo.model;
 
+import java.math.BigDecimal;
+
 import br.com.minimundo.enums.TipoProvaEnum;
 
 public class Prova {
 
-	private double nota;
+	private BigDecimal nota;
 	private TipoProvaEnum tipo;
 
-	public Prova(double nota, TipoProvaEnum tipo) {
+	public Prova(BigDecimal nota, TipoProvaEnum tipo) {
 		this.nota = nota;
 		this.tipo = tipo;
 	}
@@ -16,11 +18,11 @@ public class Prova {
 		return null;
 	}
 
-	public double getNota() {
+	public BigDecimal getNota() {
 		return nota;
 	}
 
-	public void setNota(double nota) {
+	public void setNota(BigDecimal nota) {
 		this.nota = nota;
 	}
 
@@ -36,7 +38,5 @@ public class Prova {
 	public String toString() {
 		return "Prova [nota=" + nota + ", tipo=" + tipo + "]";
 	}
-	
-	
 
 }

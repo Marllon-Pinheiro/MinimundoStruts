@@ -2,15 +2,15 @@ package br.com.minimundo.action;
 
 import java.util.List;
 
+import com.opensymphony.xwork2.ActionSupport;
+
 import br.com.minimundo.converter.Converter;
 import br.com.minimundo.db.AlunoDB;
 import br.com.minimundo.dto.AlunoDTO;
 
-import com.opensymphony.xwork2.ActionSupport;
+public class ListaTurma3 extends ActionSupport {
 
-public class ListaAlunosAction extends ActionSupport {
-
-	private static final long serialVersionUID = 1789134549018038140L;
+private static final long serialVersionUID = 1789134549018038140L;
 	
 	List<AlunoDTO> alunosDTO = null;
 
@@ -23,9 +23,7 @@ public class ListaAlunosAction extends ActionSupport {
 	}
 
 	public String execute() {
-		AlunoDB db = new AlunoDB();
-		Converter conv = new Converter();
-		this.alunosDTO = conv.converterToDTO(db.getAlunos1());
+		this.alunosDTO = Converter.converterToListAlunoDTO(AlunoDB.getAlunos3());
 		return SUCCESS;
 	}
 }

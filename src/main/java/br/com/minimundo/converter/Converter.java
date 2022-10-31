@@ -8,14 +8,21 @@ import br.com.minimundo.model.Aluno;
 
 public class Converter {
 
-	public List<AlunoDTO> converterToDTO(List<Aluno> alunos) {
-		
+	public static List<AlunoDTO> converterToListAlunoDTO(List<Aluno> alunos) {
+
 		List<AlunoDTO> dtos = new ArrayList<AlunoDTO>();
-		
-		for(Aluno aluno : alunos){
+
+		for (Aluno aluno : alunos) {
 			AlunoDTO dto = new AlunoDTO(aluno);
 			dtos.add(dto);
 		}
 		return dtos;
+	}
+
+	public static AlunoDTO converterToAlunoDTO(Aluno aluno) {
+
+		AlunoDTO dto = new AlunoDTO(aluno);
+
+		return dto;
 	}
 }
